@@ -1,6 +1,7 @@
 <script setup>
 
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import {
   NButton,
   NMessageProvider,
@@ -9,17 +10,22 @@ import {
 } from 'naive-ui';
 
 const { message } = createDiscreteApi(['message'])
+const router = useRouter();
+
+function onCLickTitle() {
+  router.push('/')
+}
 
 function onClickRegister() {
-
+  router.push('/register')
 }
 
 function onClickLogin() {
-
+  router.push('/login')
 }
 
 function onClickPost() {
-
+  router.push('/post')
 }
 
 function onClickProfile() {
@@ -28,19 +34,15 @@ function onClickProfile() {
 </script>
 
 <template>
-  <n-config-provider>
-    <n-message-provider>
-      <header class="header-bar">
-        <h1 class="title">2ch</h1>
-        <div class="actions">
-          <n-button type="primary" @click="onClickRegister">Register</n-button>
-          <n-button type="primary" @click="onClickLogin">Login</n-button>
-          <n-button type="primary" @click="onClickPost">Post</n-button>
-          <n-button type="primary" @click="onClickProfile">Profile</n-button>
-        </div>
-      </header>
-    </n-message-provider>
-  </n-config-provider>
+  <header class="header-bar">
+    <h1 class="title" @click="onCLickTitle">2ch</h1>
+    <div class="actions">
+      <n-button type="primary" @click="onClickRegister">Register</n-button>
+      <n-button type="primary" @click="onClickLogin">Login</n-button>
+      <n-button type="primary" @click="onClickPost">Post</n-button>
+      <n-button type="primary" @click="onClickProfile">Profile</n-button>
+    </div>
+  </header>
 </template>
 
 <style scoped>

@@ -38,10 +38,3 @@ const threads = ref([
     />
   </div>
 </template>
-
-<style scoped>
-.content {
-  border: 1px solid black;
-  margin: 8px;
-}
-</style>

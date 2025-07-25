@@ -9,7 +9,9 @@ import HomeThreads from './views/HomeThreads.vue';
 <template>
   <div class="page">
     <Header />
-    <HomeThreads />
+    <div id="main-content">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -17,5 +19,10 @@ import HomeThreads from './views/HomeThreads.vue';
 .page {
   font-family: sans-serif;
   margin: 0;
+}
+
+#main-content {
+  border: 1px solid black;
+  margin: 8px;
 }
 </style>
