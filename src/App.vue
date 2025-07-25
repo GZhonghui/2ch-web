@@ -31,12 +31,10 @@ const threads = ref([
     <header class="header-bar">
       <h1 class="title">2ch</h1>
       <div class="actions">
-        <n-button type="primary">
-          Register
-        </n-button>
-        <n-button type="primary">
-          Login
-        </n-button>
+        <n-button type="primary">Register</n-button>
+        <n-button type="primary">Login</n-button>
+        <n-button type="primary">Post</n-button>
+        <n-button type="primary">Profile</n-button>
       </div>
     </header>
 
