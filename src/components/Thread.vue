@@ -1,12 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 
-// const title = ref('Empty Title')
-// const content = ref('Empty Content')
-// const user_name = ref('Empty User Name')
-// const post_time = ref('2025/07/20 19:22:11')
-// const reply_count = ref(7)
-
 const props = defineProps({
   id: { type: Number, required: true },
   title: { type: String, required: true },
@@ -27,12 +21,12 @@ const props = defineProps({
 
 <style scoped>
 .thread-preview {
-  border: 1px solid rgb(26, 206, 16);
+  border: 1px solid rgb(176, 185, 176);
   margin: 8px;
 }
 
 .thread-preview:hover {
-  background-color: rgb(26, 206, 16);
+  background-color: rgb(176, 185, 176);
 }
 
 .thread-preview p {
