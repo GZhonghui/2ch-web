@@ -11,8 +11,12 @@ let title = ref("");
 let content = ref("");
 
 function onClickPost() {
-  // router.push('/')
-  message.error('Please input title!')
+  if(title.value == "") {
+    message.error('Please input title!')
+  } else {
+    message.info(`Sending... [${title.value}]`)
+    router.push('/')
+  }
 }
 
 </script>
