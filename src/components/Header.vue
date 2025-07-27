@@ -9,6 +9,7 @@ import {
   createDiscreteApi
 } from 'naive-ui';
 
+// 不太清楚这是获取了个什么，但是可以用来显示消息
 const { message } = createDiscreteApi(['message'])
 const router = useRouter();
 

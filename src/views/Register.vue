@@ -19,6 +19,8 @@ async function onClickRegister() {
     message.info("Try to register...")
 
     try {
+      // 请求API
+      // 端口不同也算跨域
       const res = await fetch('http://127.0.0.1:8000/user/register', {
         method: 'POST',
         headers: {
